@@ -1,0 +1,12 @@
+{
+  "extensions.updateCheck": "weekly",
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "codeLens.enable": true,
+  "java.enabled": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable",
+  "clangd.arguments": [
+    "--background-index",
+    "--compile-commands-dir=build"
+  ]
+}
