@@ -1,0 +1,12 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Mon May  4 18:33:16 2026"
+  rime_version: 1.13.1
+patch:
+  ascii_mode: 0
+  good_old_caps_lock: true
+  schema_list:
+    - {schema: luna_pinyin_simp}
+    - {schema: double_pinyin_flypy}

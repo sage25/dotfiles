@@ -1,0 +1,10 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Mon May  4 08:20:07 2026"
+  rime_version: 1.13.1
+patch:
+  "style/color_scheme": ink
+  show_status_bar: false
+  show_notifications: false

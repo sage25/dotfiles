@@ -1,0 +1,233 @@
+# ===== C 基础 =====
+printf	printf
+scanf	scanf
+fprintf	fprintf
+fscanf	fscanf
+sprintf	sprintf
+snprintf	snprintf
+puts	puts
+gets	gets
+struct	struct
+enum	enum
+typedef	typedef
+define	define
+const	const
+static	static
+volatile	volatile
+inline	inline
+extern	extern
+register	register
+sizeof	sizeof
+NULL	NULL
+argc	argc
+argv	argv
+stdin	stdin
+stdout	stdout
+stderr	stderr
+EOF	EOF
+size_t	size_t
+ssize_t	ssize_t
+off_t	off_t
+
+# ===== 内存管理 =====
+malloc	malloc
+calloc	calloc
+realloc	realloc
+free	free
+memset	memset
+memcpy	memcpy
+memmove	memmove
+memcmp	memcmp
+
+# ===== 字符串 =====
+strlen	strlen
+strcpy	strcpy
+strncpy	strncpy
+strcat	strcat
+strncat	strncat
+strcmp	strcmp
+strncmp	strncmp
+strchr	strchr
+strstr	strstr
+strtok	strtok
+
+# ===== 文件操作 =====
+fopen	fopen
+fclose	fclose
+fread	fread
+fwrite	fwrite
+fflush	fflush
+fseek	fseek
+ftell	ftell
+
+# ===== C++ 基础 =====
+cout	cout
+cin	cin
+endl	endl
+string	string
+vector	vector
+map	map
+set	set
+unordered_map	unordered_map
+unordered_set	unordered_set
+pair	pair
+make_pair	make_pair
+class	class
+public	public
+private	private
+protected	protected
+namespace	namespace
+template	template
+typename	typename
+using	using
+auto	auto
+nullptr	nullptr
+std	std
+override	override
+virtual	virtual
+explicit	explicit
+constexpr	constexpr
+
+# ===== C++ STL 常用 =====
+push_back	push_back
+pop_back	pop_back
+emplace_back	emplace_back
+size	size
+empty	empty
+clear	clear
+begin	begin
+end	end
+insert	insert
+erase	erase
+find	find
+sort	sort
+stack	stack
+queue	queue
+priority_queue	priority_queue
+deque	deque
+algorithm	algorithm
+reverse	reverse
+lower_bound	lower_bound
+upper_bound	upper_bound
+count	count
+accumulate	accumulate
+unique	unique
+
+# ===== C++ 智能指针 =====
+shared_ptr	shared_ptr
+unique_ptr	unique_ptr
+weak_ptr	weak_ptr
+make_shared	make_shared
+
+# ===== Linux 系统调用 =====
+fork	fork
+execve	execve
+wait	wait
+waitpid	waitpid
+exit	exit
+_exit	_exit
+getpid	getpid
+getppid	getppid
+
+# ===== 文件描述符 =====
+open	open
+close	close
+read	read
+write	write
+lseek	lseek
+dup	dup
+dup2	dup2
+
+# ===== IO 多路复用 =====
+select	select
+poll	poll
+epoll_create	epoll_create
+epoll_ctl	epoll_ctl
+epoll_wait	epoll_wait
+
+# ===== socket 编程 =====
+socket	socket
+bind	bind
+listen	listen
+accept	accept
+connect	connect
+send	send
+recv	recv
+sendto	sendto
+recvfrom	recvfrom
+shutdown	shutdown
+sockaddr_in	sockaddr_in
+AF_INET	AF_INET
+SOCK_STREAM	SOCK_STREAM
+INADDR_ANY	INADDR_ANY
+
+# ===== 线程 =====
+pthread_create	pthread_create
+pthread_join	pthread_join
+pthread_exit	pthread_exit
+pthread_mutex_lock	pthread_mutex_lock
+pthread_mutex_unlock	pthread_mutex_unlock
+pthread_cond_wait	pthread_cond_wait
+pthread_cond_signal	pthread_cond_signal
+pthread_t	pthread_t
+
+# ===== 信号 =====
+signal	signal
+sigaction	sigaction
+kill	kill
+raise	raise
+alarm	alarm
+pause	pause
+
+# ===== 进程间通信 =====
+pipe	pipe
+mkfifo	mkfifo
+shmget	shmget
+shmat	shmat
+shmdt	shmdt
+msgget	msgget
+msgsnd	msgsnd
+msgrcv	msgrcv
+
+# ===== 常用命令（Linux）=====
+ls	ls
+cd	cd
+pwd	pwd
+grep	grep
+find	find
+awk	awk
+sed	sed
+chmod	chmod
+chown	chown
+ps	ps
+top	top
+killall	killall
+man	man
+sudo	sudo
+apt	apt
+yum	yum
+dpkg	dpkg
+systemctl	systemctl
+service	service
+journalctl	journalctl
+dmesg	dmesg
+ifconfig	ifconfig
+ping	ping
+ssh	ssh
+scp	scp
+wget	wget
+tar	tar
+curl	curl
+vim	vim
+nano	nano
+make	make
+gcc	gcc
+g++	g++
+gdb	gdb
+
+# ===== 其他常用名词与错误码 =====
+errno	errno
+EINTR	EINTR
+EAGAIN	EAGAIN
+ptrdiff_t	ptrdiff_t
+pid_t	pid_t
