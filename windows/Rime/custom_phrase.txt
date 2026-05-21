@@ -231,3 +231,4 @@ EINTR	EINTR
 EAGAIN	EAGAIN
 ptrdiff_t	ptrdiff_t
 pid_t	pid_t
+linux	linux
