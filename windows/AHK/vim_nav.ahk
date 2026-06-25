@@ -27,6 +27,7 @@ CapsLock & ,::Send "{PgDn}"
 ; =========================
 
 CapsLock & n::Send "{Delete}"
+CapsLock & m::Send "{Backspace}"
 
 ; =========================
 ; Esc（超级舒服）
