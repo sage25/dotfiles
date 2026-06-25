@@ -4,6 +4,8 @@ syntax on                      " 启用语法高亮
 filetype plugin indent on      " 启用文件类型检测、插件、缩进
 let g:c_syntax_for_h = 1       " .h 文件用 C 语法高亮
 set backspace=indent,eol,start " 退格键
+set showmode                   " 显示模式
+nnoremap <F6> :set paste!<CR>  " F6切换paste模式
 
 " ========================= 基本 UI =========================
 set number                     " 显示行号
