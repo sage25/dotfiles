@@ -1,0 +1,5 @@
+windows下创建符号链接方式：
+mklink /J 链接路径 真实源目录
+
+example：
+mklink /J "%LOCALAPPDATA%\nvim" "%USERPROFILE%\dotfiles\windows\nvim\nvim"
