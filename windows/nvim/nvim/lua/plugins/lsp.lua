@@ -15,7 +15,7 @@ return {
           local bufnr = ev.buf
           local config = vim.lsp.config.gopls
           if not config then return end
-          
+
           -- 在 Windows 上，需要将命令解析为完整路径（同 lspconfig 的 sanitize_cmd）
           if vim.fn.has('win32') == 1 and type(config.cmd) == 'table' and #config.cmd > 0 then
             local exe = vim.fn.exepath(config.cmd[1])
@@ -23,7 +23,27 @@ return {
               config.cmd[1] = exe
             end
           end
-          
+
+          vim.lsp.start(config, { bufnr = bufnr })
+        end,
+      })
+
+      -- 手动启动 clangd，先解析 exepath 再调用 lsp.start
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'c', 'cpp' },
+        group   = vim.api.nvim_create_augroup('lsp-clangd', { clear = true }),
+        callback = function(ev)
+          local bufnr = ev.buf
+          local config = vim.lsp.config.clangd
+          if not config then return end
+
+          if vim.fn.has('win32') == 1 and type(config.cmd) == 'table' and #config.cmd > 0 then
+            local exe = vim.fn.exepath(config.cmd[1])
+            if #exe > 0 then
+              config.cmd[1] = exe
+            end
+          end
+
           vim.lsp.start(config, { bufnr = bufnr })
         end,
       })
@@ -39,7 +59,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     opts = {
-      ensure_installed = { "gopls" },
+      ensure_installed = { "gopls", "clangd" },
       automatic_installation = true,
       automatic_enable = false,
     },

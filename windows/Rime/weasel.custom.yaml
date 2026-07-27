@@ -8,3 +8,8 @@ patch:
   "style/color_scheme": ink
   show_status_bar: false
   show_notifications: false
+
+  app_options/Code.exe:
+    ascii_mode: true
+  app_options/WindowsTerminal.exe:
+    ascii_mode: true

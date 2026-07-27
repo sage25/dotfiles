@@ -56,3 +56,6 @@ vim.opt.undofile = true
 local undodir = vim.fn.stdpath('data') .. '/undo'
 vim.fn.mkdir(undodir, 'p')
 vim.opt.undodir = undodir
+
+-- 全局剪切板 --------------------------------------------------------------
+-- vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"

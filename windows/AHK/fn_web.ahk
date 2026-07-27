@@ -1,6 +1,7 @@
 #Requires AutoHotkey v2.0
 
-chromePath := "D:\Program Files\Google\Chrome\Application\chrome.exe"
+browserPath := "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+browserProcess := "brave.exe"
 
 ;=========================
 ; Insert + F1 ~ F12
@@ -21,17 +22,17 @@ Insert & F12::OpenUrl("https://example.com/12")
 
 OpenUrl(url)
 {
-    chromePath := "D:\Program Files\Google\Chrome\Application\chrome.exe"
+    global browserPath, browserProcess
 
-    ; 已有 Chrome 窗口
-    if WinExist("ahk_exe chrome.exe")
+    ; 已有浏览器窗口
+    if WinExist("ahk_exe " browserProcess)
     {
-        ; Chrome 会把网址发送给已有实例
-        Run '"' chromePath '" "' url '"'
+        ; 浏览器会把网址发送给已有实例
+        Run '"' browserPath '" "' url '"'
     }
     else
     {
-        ; 启动 Chrome 并打开网址
-        Run '"' chromePath '" "' url '"'
+        ; 启动浏览器并打开网址
+        Run '"' browserPath '" "' url '"'
     }
 }

@@ -232,3 +232,6 @@ EAGAIN	EAGAIN
 ptrdiff_t	ptrdiff_t
 pid_t	pid_t
 linux	linux
+
+# ======= 其他中文名词 ========
+C语言	cyy
