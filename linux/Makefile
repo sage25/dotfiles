@@ -1,7 +1,8 @@
-DOTFILE_LINUX := $(CURDIR)
+LINUXDIR := $(CURDIR)
+export LINUXDIR
+
 VIM_SH = vim/install.sh
 NODE_SH = nodejs/install.sh
-
 WGET_SH = wget/install.sh
 
 .PHONY: vim
