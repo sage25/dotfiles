@@ -5,12 +5,12 @@ VIM_SH = vim/install.sh
 NODE_SH = nodejs/install.sh
 WGET_SH = wget/install.sh
 
-.PHONY: vim
-vim: $(VIM_SH)
+.PHONY: vim nodejs wget
+vim: nodejs
 	bash $(VIM_SH)
 
-$(VIM_SH): $(NODE_SH)
+nodejs: wget
 	bash $(NODE_SH)
 
-$(NODE_SH): $(WGET_SH)
+wget:
 	bash $(WGET_SH)

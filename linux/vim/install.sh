@@ -2,6 +2,8 @@
 
 set -e
 
+source "$HOME/.bashrc"
+
 if [ -d "$HOME/.vim" ]; then
     if [ -d "$HOME/.vim.bak" ]; then
         rm -rf "$HOME/.vim.bak"
