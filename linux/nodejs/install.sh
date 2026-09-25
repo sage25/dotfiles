@@ -2,24 +2,25 @@
 set -e
 
 NVM_DIR="$HOME/.nvm"
+NVM_VERSION="v0.40.8"
+
+# If Node.js >= 22 already exists, skip everything
+if command -v node &>/dev/null; then
+    NODE_MAJOR=$(node -p 'process.versions.node.split(".")[0]')
+    if [ "$NODE_MAJOR" -ge 22 ]; then
+        echo "Node.js $NODE_MAJOR already installed, skipping."
+        exit 0
+    fi
+fi
 
 echo "Installing NVM..."
 
 bash $LINUXDIR/PM/PM.sh wget
 
+# Install NVM only if it does not already exist
 if [ ! -s "$NVM_DIR/nvm.sh" ]; then
-    NVM_LATEST=$(wget -qO- \
-        https://api.github.com/repos/nvm-sh/nvm/releases/latest |
-        grep -o '"tag_name": "[^"]*' |
-        cut -d'"' -f4)
-
-    if [ -z "$NVM_LATEST" ]; then
-        echo "Error: Failed to get latest NVM version" >&2
-        exit 1
-    fi
-
     wget -qO- \
-        "https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_LATEST}/install.sh" |
+        "https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh" |
         bash >/dev/null
 fi
 
