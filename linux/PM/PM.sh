@@ -28,7 +28,9 @@ case "$ID" in
     opensuse*|sles)
         sudo zypper install -y "$@" >/dev/null
         ;;
-
+    alpine)
+        sudo apk add "$@" >/dev/null         
+        ;;
     *)
         echo "Unsupported distribution: $ID" >&2
         exit 1
