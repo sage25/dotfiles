@@ -49,9 +49,11 @@ echo "Start installing Vim plugins"
 if ! GIT_CONFIG_COUNT=1 \
     GIT_CONFIG_KEY_0="url.https://ghfast.top/https://github.com/.insteadOf" \
     GIT_CONFIG_VALUE_0="https://github.com/" \
-    timeout 120 vim -es -u "$HOME/.vimrc" \
+    timeout 120 \
+    vim -es -u "$HOME/.vimrc" \
         -c "PlugInstall --sync" \
-        -c "qa!" </dev/null
+        -c "qa!" \
+        </dev/null
 then
     echo "WARN: Vim plugin installation failed or timed out" >&2
 fi
